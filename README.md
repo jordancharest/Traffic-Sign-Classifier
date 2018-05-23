@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./write_up_images/class_histogram.jpg "Class Histogram"
+[image1]: ./write_up_images/class_histogram.png "Class Histogram"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
@@ -43,7 +43,7 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Below is an exploratory visualization of the data set. It is a histogram showing the frequency of the classes in the data set. Adding the class names (labels) clutters the chart too much, so to see the mapping of class number to label, see [here.](./sign_names.csv)
 
 ![alt text][image1]
 
