@@ -51,23 +51,15 @@ Below is an exploratory visualization of the data set. It is a histogram showing
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, I decided to convert the images to grayscale to reduce computational cost as well as reduce complexity of the model.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
+As a last step, I normalized the image data because this greatly increases the probability that the cost function is well-behaved. When feeding an image into the network, if the image data is not normalized, for one image, a particular weight may be too large, and for another, it may be too small. Since we are multiplying the data by the weights, large data values could cause the gradient updates to go out of control, while small data values could have little effect. The two pictures may have the same feature that we would like to recognize, but the pixel intensities may be significanlty different. Normalizing helps to close that gap.
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
+I decided not to generate additional data as a step to keep computational cost down. I planned to do it if I needed an accuracy boost, however, it was shown to not be necessary, as most runs ended up with an accuracy above 93%. If I attempted to increase the accuracy to 99%+, then augmenting the dataset would probably be necessary.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -76,7 +68,7 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
+| Input         		| 32x32x1 grayscale image   							| 
 | Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
