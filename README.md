@@ -20,11 +20,11 @@ The goals / steps of this project are the following:
 [image1]: ./write_up_images/class_histogram.png "Class Histogram"
 [image2]: ./write_up_images/grayscaled.png "Preprocessed image"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./test/bumpy_road.jpg "Traffic Sign 1"
+[image5]: ./test/priority_road.jpg "Traffic Sign 2"
+[image6]: ./test/Road_Work.jpg "Traffic Sign 3"
+[image7]: ./test/stop.jpg "Traffic Sign 4"
+[image8]: ./test/yield.jpg "Traffic Sign 5"
 
 
 
@@ -94,15 +94,13 @@ To train the model, I used the Adam optimizer for 25 epochs, with a batch size o
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy: not measured and is fairly meaningless
+* validation set accuracy: 94.4%
+* test set accuracy: 93.2%
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+As discussed previously, the LeNet architecture was chosen. This architecture has been shown to do well on classifying images. I originally chose it because I was familiar with the architecture and knew it would make a good starting point. This turned out to be a good choice, because the architecture performed well with only a few small modifications. Many training runs showed validation set accuracy over 96%. The last epoch of the run currently displayed in the jupyter notebook is 94.4%.
+
+The model's performance on the test set was 93.3%, which is fairly close to the validation set accuracy, implying the model is performing well and hasn't been overfit, despite not taking significant steps to prevent overfitting. I only trained for 25 epochs, Training any longer would likely start to result in overfitting unless I added dropout or augmented the dataset.
 
 ### Test a Model on New Images
 
