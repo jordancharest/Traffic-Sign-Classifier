@@ -25,6 +25,7 @@ The goals / steps of this project are the following:
 [image6]: ./test/Road_Work.jpg "Traffic Sign 3"
 [image7]: ./test/stop.jpg "Traffic Sign 4"
 [image8]: ./test/yield.jpg "Traffic Sign 5"
+[softmax]: ./write_up_images/softmax.png "Softmax Probabilities"
 
 
 
@@ -133,4 +134,4 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 For all images except for the stop sign, the model is extremely sure (99.5%+) of its classification. However, for the stop sign, the correct label is not even in the top five guesses. The softmax probabilities are shown in the jupyter notebook and repeated below:
 
-
+![alt_text][softmax]
