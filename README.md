@@ -58,7 +58,7 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because this greatly increases the probability that the cost function is well-behaved. When feeding an image into the network, if the image data is not normalized, for one image, a particular weight may be too large, and for another, it may be too small. Since we are multiplying the data by the weights, large data values could cause the gradient updates to go out of control, while small data values could have little effect. The two pictures may have the same feature that we would like to recognize, but the pixel intensities may be significanlty different. Normalizing helps to close that gap.
+As a last step, I normalized the image data because this greatly increases the probability that the cost function is well-behaved. When feeding an image into the network, if the image data is not normalized, for one image, a particular weight may be too large, and for another, it may be too small. Since we are multiplying the data by the weights, large data values could cause the gradient updates to go out of control, while small data values could have little effect. The two pictures may have the same feature that we would like to recognize, but the pixel intensities may be significantly different. Normalizing helps to close that gap.
 
 I decided not to generate additional data as a step to keep computational cost down. I planned to do it if I needed an accuracy boost, however, it was shown to not be necessary, as most runs ended up with an accuracy above 93%. If I attempted to increase the accuracy to 99%+, then augmenting the dataset would probably be necessary.
 
